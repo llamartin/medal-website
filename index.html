@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDAL - Melbourne Environmental Data Analytics Lab</title>
+    <link rel="stylesheet" href="css/styles.css">    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: rgb(249, 250, 251);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #dbeafe;
+            max-width: 48rem;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+            padding: 2rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .card p {
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        /* Research Areas */
+        .research-area {
+            border-left: 4px solid #2563eb;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .research-area-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .research-area-header svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            color: #2563eb;
+        }
+
+        .research-area-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .research-area ul {
+            list-style: none;
+            color: #4b5563;
+        }
+
+        .research-area li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            margin-top: 4rem;
+        }
+
+        .team h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .team-card {
+            display: flex;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .team-card-photo {
+            flex: 1;
+            position: relative;
+        }
+
+        .team-card-photo img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card-content {
+            flex: 1;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-card a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .team-card a:hover {
+            color: #2563eb;
+        }
+
+        .team-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .team-card .external-link {
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .team-card a:hover .external-link {
+            opacity: 1;
+        }
+
+        .team-card p {
+            color: #4b5563;
+            margin-top: 0.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f3f4f6;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            color: #4b5563;
+        }
+
+        /* Main content spacing */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 640px) {
+            .team-card {
+                flex-direction: column;
+            }
+
+            .team-card-photo {
+                height: 200px;
+                position: relative;
+            }
+
+            .team-card-photo img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>MEDAL</h1>
+            <h2>Melbourne Environmental Data Analytics Lab</h2>
+            <p>
+                Designing effective economic policy for the decarbonisation of energy, transportation, and
+                manufacturing and the protection of forest and water systems
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <!-- First Research Arm -->
+            <div class="card">
+                <h2>1. Harnessing behavioural responses for social good</h2>
+                <p>
+                    We use randomized control trials (RCTs) and real-time information systems facilitated by new
+                    technologies, consumer web platforms and apps
+                </p>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        <h3>Electricity</h3>
+                    </div>
+                    <ul>
+                        <li>• Price dispersion and retail choice</li>
+                        <li>• Winners and losers from retail competition</li>
+                        <li>• Incentives to smooth peak demand</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 17h2l.64-2.54c.24-.959.24-1.962 0-2.92l-1.07-4.27A3 3 0 0 0 17.66 5H4a2 2 0 0 0-2 2v10h2m17 0H3m16 0h-2M3 17v-5m2 5v-5m12 5v-5M5 17v-5"/>
+                        </svg>
+                        <h3>Transport</h3>
+                    </div>
+                    <ul>
+                        <li>• Cost of road congestion</li>
+                        <li>• Charging station maintenance and availability</li>
+                        <li>• Price incentives to better allocate chargers to users</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.77s-1.71 2.02-1.71 3.19c0 2.22 1.8 4.04 4 4.04z"/>
+                        </svg>
+                        <h3>Water</h3>
+                    </div>
+                    <ul>
+                        <li>• Incentives for home water tank network to provide environmental services in order to protect downstream biodiversity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Second Research Arm -->
+            <div class="card">
+                <h2>2. New tools to fill data gaps in industrializing countries</h2>
+                <p>
+                    We develop new data: trade partner relationships to merge firm-level datasets across international
+                    boundaries, and air circulation models and AI-processed satellite imagery to measure industrial
+                    activity, power generation, air quality, and land use
+                </p>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                            <path d="M9 18h6"/>
+                            <path d="M10 22h4"/>
+                        </svg>
+                        <h3>Energy Markets</h3>
+                    </div>
+                    <p>Interaction between energy market reforms and who wins and loses from EV rollout in China</p>
+                </div>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19c0-4.2-2.8-7-7-7M12 19c0-4.2 2.8-7 7-7M12 19V5"/>
+                        </svg>
+                        <h3>Deforestation</h3>
+                    </div>
+                    <p>Role of migration and bushfires on deforestation in Indonesia and Brazil</p>
+                </div>
+
+                <div class="research-area">
+                    <div class="research-area-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12H2m20 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10z"/>
+                            <path d="M16 12c0-2.65-1.75-4-4-4s-4 1.35-4 4"/>
+                        </svg>
+                        <h3>Manufacturing</h3>
+                    </div>
+                    <p>Effectiveness of carbon taxes and carbon offsets in reducing GHG emissions in heavy manufacturing in India</p>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team">
+                <h2>Our Team</h2>
+                <div class="team-grid" id="team-container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Department of Economics</p>
+            <p>University of Melbourne</p>
+        </div>
+    </footer>
+
+    <script>
+        const researchers = [
+            {
+                name: "A/Prof Leslie Martin",
+                title: "Lead Investigator",
+                photo: "images/Leslie-Martin.jpg", 
+                photoSize: "400/400",
+                website: "https://www.lesliemartin.org/"
+            },
+            {
+                name: "Prof David Byrne",
+                title: "Researcher",
+                photo: "images/David-Byrne.jpg",                 
+                photoSize: "400/400",
+                website: "https://sites.google.com/view/dprbyrne/"
+            },
+            {
+                name: "Dr Kathryn Baragwanath",
+                title: "Researcher",
+                photo: "images/Kathryn-Baragwanath.jpg", 
+                photoSize: "400/400",
+                website: "https://kathrynbaragwanath.com/"
+            },
+            {
+                name: "Dr Emmanuel Murray-Leclair",
+                title: "Researcher",
+                photo: "images/Emmanuel-Murray-Leclair.jpg",                 
+                photoSize: "400/400",
+                website: "https://sites.google.com/view/emmanuelmurrayleclair"
+            },
+            {
+                name: "Dr Sebastian Tebbe",
+                title: "Researcher",
+                photo: "images/Sebastian-Tebbe.jpg",                 
+                photoSize: "400/400",
+                website: "https://sebastiantebbe.github.io/"
+            }
+        ];
+
+        const teamContainer = document.getElementById('team-container');
+
+        researchers.forEach(researcher => {
+            const teamCard = document.createElement('div');
+            teamCard.className = 'team-card';
+            
+    teamCard.innerHTML = `
+        <div class="team-card-photo">
+            <img src="${researcher.photo}" alt="${researcher.name}">
+        </div>
+        <div class="team-card-content">
+            <a href="${researcher.website}" target="_blank" rel="noopener noreferrer">
+                <h3>${researcher.name}</h3>
+                <svg class="external-link" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+            </a>
+            <p>${researcher.title}</p>
+        </div>
+    `;
+            
+            teamContainer.appendChild(teamCard);
+        });
+    </script>    
+    <script src="js/main.js"></script>
+</body>
+</html>

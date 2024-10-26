@@ -1,0 +1,15 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: rgb(249, 250, 251);
+    line-height: 1.5;
+}
+
+/* All the other styles from the previous HTML file */
+/* ... Copy all the CSS from between the <style> tags ... */
